@@ -96,8 +96,8 @@ def glmnetPlot(x, xvar = 'norm', label = False, ptype = 'coef', **options):
         else:
             norm = 0
         
+        ncl = x['dfmat'].shape[0]
         if ptype == 'coef':
-            ncl = x['dfmat'].shape[0]
             if x['class'] == 'multnet':
                 for i in range(ncl):
                     str = 'Coefficients: Class %d' % (i) 
